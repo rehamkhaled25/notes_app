@@ -15,6 +15,9 @@ final void Function(String?)? onSaved;
         if(value?.isEmpty ?? true){
           return 'Field is required';
         }
+       else{
+        return null;
+       }
       } ,
         cursorColor: kPrimaryColor,
       decoration:  InputDecoration (
