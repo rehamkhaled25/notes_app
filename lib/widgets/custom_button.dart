@@ -14,7 +14,7 @@ decoration: BoxDecoration(
   borderRadius: BorderRadius.circular(8),
 ),
 child: Center(child: Text('save',style: TextStyle(
-  color: kPrimaryColor,fontSize: 18,
+  color: Colors.black,fontSize: 18,
   fontWeight: FontWeight.bold)
 ),
 ),
