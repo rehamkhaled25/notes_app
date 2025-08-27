@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:intl/intl.dart';
 import 'package:last_project/cubits/add_note_cubit.dart';
-import 'package:last_project/cubits/add_note_state.dart';
+import 'package:last_project/cubits/add_notes_states.dart';
 import 'package:last_project/models/note_model.dart';
 import 'package:last_project/widgets/custom_button.dart';
+import 'package:last_project/widgets/custom_note_item.dart';
 import 'package:last_project/widgets/custom_text_field.dart';
 
 class AddNoteForm extends StatefulWidget {
@@ -51,8 +53,10 @@ class _AddNoteFormState extends State<AddNoteForm> {
                 onTap: () {
                   if (formKey.currentState!.validate()) {
                     formKey.currentState!.save();
+                    var currentDate = DateTime.now();
+                    var formattedCurrentDate= DateFormat.yMd().format(currentDate);
                     var noteModel = NoteModel(
-                      date: DateTime.now().toString(),
+                      date:formattedCurrentDate ,
                       color: Colors.blue.value,
                       subTitle: subTitle!,
                       title: title!,

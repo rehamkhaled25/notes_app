@@ -1,6 +1,6 @@
 import 'package:hive_flutter/adapters.dart';
-import 'package:last_project/cubits/add_note_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:last_project/cubits/add_notes_states.dart';
 import 'package:last_project/models/note_model.dart';
 import 'package:last_project/widgets/constants.dart';
 class AddNoteCubit extends Cubit<AddNoteState> {
@@ -16,6 +16,7 @@ class AddNoteCubit extends Cubit<AddNoteState> {
   emit(AddNoteSuccess());
 } 
 catch (e) {
+
   emit(AddNoteFailure(e.toString()));
 }
   }
