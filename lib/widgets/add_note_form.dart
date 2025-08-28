@@ -6,7 +6,6 @@ import 'package:last_project/cubits/add_notes_states.dart';
 import 'package:last_project/models/note_model.dart';
 import 'package:last_project/widgets/colors_list_view.dart';
 import 'package:last_project/widgets/custom_button.dart';
-import 'package:last_project/widgets/custom_note_item.dart';
 import 'package:last_project/widgets/custom_text_field.dart';
 
 class AddNoteForm extends StatefulWidget {
@@ -43,7 +42,9 @@ class _AddNoteFormState extends State<AddNoteForm> {
             hint: 'content',
             onSaved: (value) {
               subTitle = value;
+
             },
+
             maxLines: 5,
           ),
           SizedBox(
